@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice3</title>
+    <style>
+        #inner_table {
+            border: 1px solid black;
+        }
+
+        #inner_td {
+            border: 1px solid black;
+        }
+
+        #padding {
+            padding: 4px;
+        }
+
+        #main_table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #main_table tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        #main_table th {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        #main_table td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<center>
+    <body>
+        <div id="main">
+            <div id="container">
+                <h5>Example : Nested</h5>
+                <table id="main_table">
+                    <tr>
+                        <th style="text-align: center;" rowspan="2" colspan="2">
+                            <h5>CI</h5>
+                        </th>
+                        <th rowspan="2">
+                            <h5>All Genders</h5>
+                        </th>
+                        <th>
+                            <h5>By Gender</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td id="padding">
+                            <table id="inner_table">
+                                <tr>
+                                    <td id="inner_td">
+                                        <h6>Males</h6>
+                                    </td>
+                                    <td id="inner_td">
+                                        <h6>Females</h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="inner_td">9215604</td>
+                                    <td id="inner_td">4512358</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    <tr>
+                        <td>
+                            <h5>Ruler</h5>
+                        </td>
+                        <td>6521458</td>
+                        <td>4215389</td>
+                        <td>4152348</td>
+                    </tr>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+</center>
+
+</html>

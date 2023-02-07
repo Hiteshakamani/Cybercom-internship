@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1.1.3</title>
+</head>
+<body>
+    <button onclick="changeText('para1', 'This is paragraph 1.')">Button 1</button>
+    <button onclick="changeText('para2', 'This is paragraph 2.')">Button 2</button>
+    <button onclick="changeText('para3', 'This is paragraph 3.')">Button 3</button>
+    <p id="para1">This is the original text of paragraph 1.</p>
+    <p id="para2">This is the original text of paragraph 2.</p>
+    <p id="para3">This is the original text of paragraph 3.</p>
+  </body>
+  <script>
+    function changeText(id, newText) {
+      document.getElementById(id).innerHTML = newText;
+    }
+  </script>
+
+
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1.3</title>
+    <script>
+
+
+
+// Create an array of numbers and write code to calculate the sum, average, and maximum value of the numbers in the array.
+
+        const points = [40, 100, 1, 5, 25, 10];
+        var total = 0;
+        var avg = total / points.length;
+for (var i in points) {
+  total += points[i];
+}
+console.log("Total sum is = " + total);
+console.log("Total average is = " + avg);
+//max number.........
+var max = points[0];
+for (var i = 1; i < points.length; i++) {
+  if (points[i] > max) {
+    max = points[i];
+  }
+}
+console.log("Max: " + max);
+
+
+// Create an array of strings and write code to find the longest string in the array.
+
+
+let word = ["apple", "banana", "cherry", "date"];
+
+let longestWord = "";
+
+for (let i = 0; i < word.length; i++) {
+  if (word[i].length > longestWord.length) {
+    longestWord = word[i];
+  }
+}
+
+console.log(longestWord);
+
+// Create an array of objects and write code to sort the objects based on a specific property (e.g., name, age, etc.).
+
+let people = [  { name: "John", age: 28 }, 
+ { name: "Jane", age: 32 }, 
+  { name: "Jim", age: 25 }, 
+   { name: "Joan", age: 31 },];
+
+people.sort((a, b) => a.age - b.age);
+
+console.log(people);
+
+// Write a function that takes an array as an argument and returns a new array with duplicates removed.
+
+let arr = ['A', 'B', 'A', 'C', 'B'];
+
+function removeDuplicates(arr) {
+  return Array.from(new Set(arr));
+}
+
+// Write a function that takes two arrays as arguments and returns a new array that combines the elements of both arrays, removing any duplicates.
+let arr1 = ['A', 'B', 'A', 'C', 'B'];
+let arr2 = ['C', 'V', 'P', 'C', 'L'];
+
+function combineAndRemoveDuplicates(arr1, arr2) {
+  return Array.from(new Set([...arr1, ...arr2]));
+}
+
+// Create an array of strings and write code to sort the strings in alphabetical order.
+
+let words = ["apple", "banana", "cherry", "date"];
+
+words.sort();
+
+console.log(words);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

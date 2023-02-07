@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1.2</title>
+    <script>
+        // 1. Create an object to store information about a person (e.g., name, age, address, etc.). Write code to access and modify the object's properties.
+const person = {
+    firstName: "Hitesha",
+    lastName: "kamani",
+    age: 21,
+    address: "shivranjini, ahmedabad"
+  };
+  console.log("First name = ", person.firstName);
+  console.log("Last name = ", person.lastName);
+  console.log("Age = ", person.age);
+  console.log("Address = ", person.address);
+
+  person.address = "Bhavnagar";
+  person.age = 31;
+  person.firstName = "Hitanshi";
+  person.lastName ="Shah";
+
+  console.log("First name = ", person.firstName);
+  console.log("Last name = ", person.lastName);
+  console.log("Age = ", person.age);
+  console.log("Address = ", person.address);
+
+
+
+// 2. Create an object to store information about a product (e.g., name, price, quantity, etc.). Write code to calculate the total cost of a specified quantity of the product.
+
+const product ={ 
+    name : "Product",
+    price : 10,
+    quantity : 30,
+    cost : function( price) {
+    return price * this.quantity;
+  }
+    
+};
+
+console.log("The price of the " + product.name + " is " + product.cost( product.price) );
+
+
+// 3. Create an array of objects to store information about multiple people or products. Write code to loop through the array and display the information for each object.
+
+var people = [
+  {
+    firstName: "Hitesha",
+    lastName: "kamani",
+    age: 21,
+    address: "shivranjini, ahmedabad"
+  },
+  {
+    firstName: "Hitanshi",
+    lastName: "shah",
+    age: 21,
+    address: "shivranjini, ahmedabad"
+  }, {
+    firstName: "Vishwa",
+    lastName: "Sutariya",
+    age: 21,
+    address: "shivranjini, ahmedabad"
+  }, {
+    firstName: "Hiren",
+    lastName: "khunt",
+    age: 21,
+    address: "Memnagar, ahmedabad"
+  },
+  
+
+];
+for (var i = 0; i < people.length; i++) {
+    console.log("First name: " + people[i].firstName);
+    console.log("Last name: " + people[i].lastName);
+    console.log("Age: " + people[i].age);
+    console.log("Address: " + people[i].address);
+    console.log("\n");
+}
+
+
+// 4. Write a function that takes an object as an argument and returns a new object with specific properties. For example, a function that takes an object with name, age, and address properties and returns an object with only the name and age properties.
+
+
+
+  function properties(person) {
+    return 
+    {
+      Firstname : person.firstName,
+      Lastname : person.lastName,
+      Age : person.age
+
+    };
+}
+
+// 5. Write a function that takes two objects as arguments and returns a new object that combines the properties of both objects. For example, a function that takes two objects with name and age properties and returns an object with name, age, and address properties.
+
+const merged =  mergeObjects(person,product);
+console.log(merged);
+
+    </script>
+</head>
+<body>
+    Inspact this page and see the output in console.
+</body>
+</html>

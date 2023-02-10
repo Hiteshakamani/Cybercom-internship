@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//     Example 1:
+// Input: <html><head></head><body></body></html>
+// Output: Valid
+// Example 2:
+// Input: <html><head></head><body></boy></html>
+// Output: Invalid
+// Example 3:
+// Input: <html><head></head><body><p>this is test element</p></body></html>
+// Output: Valid
+// Example 4:
+// Input: <html><head></head><body><p>this is test element</br></p></body></html>
+// Output: Valid
+    const html = "<html><head></head><body></body></html>";
+    function parseHTML(html)
+    {
+        var stack = [];
+
+        const tags = html.split("<");
+         for(let i = 0; i<tags; i++){
+
+            let tag =tag[i];
+
+            if (!tag){
+                continue;
+            }
+
+            const endTag = tag.indexOf(">");
+            const tagName = tag.substring(0 , endTag);
+            const isClosingTag = tagName[0] ==="/";
+            if (isClosingTag){
+                tagName= tagName.substring(1);
+                if(stack.length === 0 || stack[stack.length -1] !== tagName){
+                    return "Invalid";
+                }
+                stack.pop();
+
+            }else{
+                stack.push(tagName);
+
+            }
+        }
+        return  stack.length === 0 ? "valid" : "Invalid";    
+    }
+    const a = parseHTML(html);
+   
+    console.log(a);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

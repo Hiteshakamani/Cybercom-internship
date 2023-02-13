@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case1</title>
+    <script>
+        //         Given an integer array nums that may contain duplicates, return all possible
+        // subsets
+        // (the power set).
+        // The solution set must not contain duplicate subsets. Return the solution in any order.
+        // Example 1:
+        // Input: nums = [1,2,2] Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
+        // Example 2:
+        // Input: nums = [0] Output: [[],[0]]
+
+        let nums = [1, 2, 2];
+
+        function subsetsWithDup(nums) {
+            let res = [];
+            nums.sort((a, b) => a - b);
+            let dfs = (start, path) => {
+                res.push(path);
+                for (let i = start; i < nums.length; i++) {
+                    if (i > start && nums[i] === nums[i - 1]) {
+                        continue;
+                    }
+                    dfs(i + 1, path.concat(nums[i]));
+                }
+            };
+            dfs(0, []);
+            return res;
+        }
+        console.log(subsetsWithDup(nums));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

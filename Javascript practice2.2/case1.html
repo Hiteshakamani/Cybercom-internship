@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            padding: 15px;
+            background-color: rgb(31, 50, 58);
+            color: white;
+        }
+
+        #clear {
+            width: 170px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(0, 96, 128);
+        }
+
+        .formstyle {
+            width: 280px;
+            height: 450px;
+            margin: auto;
+            border: 3px solid skyblue;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+
+
+        input {
+            width: 20px;
+            background-color: rgb(0, 96, 128);
+            color: white;
+            border: 2px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 2px;
+            font-size: 10px;
+            width: 80px;
+        }
+
+
+        #calc {
+            width: 250px;
+            border: 3px solid black;
+            border-radius: 3px;
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> Calculator </h1>
+    <div class="formstyle">
+        <form name="form1">
+
+            <!-- This input box shows the button pressed by the user in calculator. -->
+            <input id="calc" type="text" name="answer"> <br> <br>
+            <!-- Display the calculator button on the screen. -->
+            <!-- onclick() function display the number prsses by the user. -->
+            <input type="button" value="1" onclick="form1.answer.value += '1' ">
+            <input type="button" value="2" onclick="form1.answer.value += '2' ">
+            <input type="button" value="3" onclick="form1.answer.value += '3' ">
+            
+            <br> <br>
+
+            <input type="button" value="4" onclick="form1.answer.value += '4' ">
+            <input type="button" value="5" onclick="form1.answer.value += '5' ">
+            <input type="button" value="6" onclick="form1.answer.value += '6' ">
+          
+            <br> <br>
+
+            <input type="button" value="7" onclick="form1.answer.value += '7' ">
+            <input type="button" value="8" onclick="form1.answer.value += '8' ">
+            <input type="button" value="9" onclick="form1.answer.value += '9' ">
+            
+            <br> <br>
+
+
+            
+            <input type="button" value="0" onclick="form1.answer.value += '0' ">
+            
+            <br>
+
+            <input type="button" value="+" onclick="form1.answer.value += '+' ">
+            <input type="button" value="-" onclick="form1.answer.value += '-' ">
+            <input type="button" value="*" onclick="form1.answer.value += '*' ">
+
+            <br> <br>
+            <input type="button" value="/" onclick="form1.answer.value += '/' ">
+            <input type="button" value="Clear All" onclick="form1.answer.value = ' ' " id="clear">
+            <br><br>
+            <center><input type="button" style="width: 150px;" value="="
+                    onclick="form1.answer.value = eval(form1.answer.value) "></center>
+            
+            <br>
+
+        </form>
+
+        <script>
+            let a;
+            let b;
+
+            function add(a, b) {
+                return a + b;
+            }
+
+            function subtract(a, b) {
+                return a - b;
+            }
+
+            function multiply(a, b) {
+                return a * b;
+            }
+
+            function divide(a, b) {
+                return a / b;
+            }
+
+            function calculate(a, b, operator) {
+                switch (operator) {
+                    case '+':
+                        return add(a, b);
+                    case '-':
+                        return subtract(a, b);
+                    case '*':
+                        return multiply(a, b);
+                    case '/':
+                        return divide(a, b);
+                    default:
+                        return 'Invalid operator';
+                }
+            }
+
+
+
+        </script>
+    </div>
+</body>
+
+</html>

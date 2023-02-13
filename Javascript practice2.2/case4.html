@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case4</title>
+    <script>
+        // Create a function that calculate age based on the date of birth. “Date of birth” will be passed via function argument.
+        // function 
+        calculateAge(dob) 
+        {
+            var today = new Date();
+            var birthDate = new Date(dob);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var month = today.getMonth() - birthDate.getMonth();
+            if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        var dob = "1995-12-17";
+        var age = calculateAge(dob);
+
+        console.log("Your age is: " + age);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case2</title>
+
+
+    <script>
+        //  Write a JavaScript function that returns array elements larger than a number, Array input should be dynamic.
+        // Example :
+        // Input
+        // Array = [2,4,4,1,0,3], number = 3
+        // Output: [4,4];
+        function findLargerElements() {
+            let array = document.getElementById("array").value.split(",").map(Number);
+            let number = document.getElementById("number").value;
+            let result = array.filter(element => element > number);
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Array: <input type="text" id="array"><br><br>
+        Number: <input type="number" id="number"><br><br>
+        <button onclick="findLargerElements()">Find Larger Elements</button>
+    </form>
+    <br><br>
+    Result: <p id="result"></p>
+</body>
+
+
+
+</html>

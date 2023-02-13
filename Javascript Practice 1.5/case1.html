@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case1</title>
+    <script>
+        let s = "0000";
+
+// Example 1:
+// Input: s = "25525511135" Output: ["255.255.11.135","255.255.111.35"]
+// Example 2:
+// Input: s = "0000" Output: ["0.0.0.0"]
+// Example 3:
+// Input: s = "101023" Output: ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
+        function restoreIpAddresses(s) {
+  function isValid(s) {
+    if (s.length > 1 && s[0] === '0') {
+      return false;
+    }
+    if (Number(s) <= 255) {
+      return true;
+    }
+    return false;
+  }
+
+  function backtrack(s, path, res) {
+    if (s.length === 0 && path.length === 4) {
+      res.push(path.join('.'));
+      return;
+    }
+
+    for (let i = 1; i <= 3; i++) {
+      if (i <= s.length) {
+        let component = s.substring(0, i);
+        if (isValid(component)) {
+          backtrack(s.substring(i), path.concat(component), res);
+        }
+      }
+    }
+  }
+
+  let res = [];
+  backtrack(s, [], res);
+  return res;
+}
+
+console.log(restoreIpAddresses(s));
+
+    </script>
+</head>
+<body>
+    <h3 ></h3>
+</body>
+</html>

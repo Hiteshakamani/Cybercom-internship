@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case2</title>
+    <script>
+// Case 2: 
+// Create a web application that contains a form with following fields.
+// First Name
+// Last Name
+// Email
+// Mobile Number
+
+// Keep all the required validation on the application.
+
+// Create two functions,
+// 1. validate all fields
+// 2. display all fieds.
+
+// Use callback functions to validate first and if validations are correct then it should be display.
+
+function validateForm() {
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  var email = document.getElementById("email").value;
+  var mobileNumber = document.getElementById("mobileNumber").value;
+  
+  if (firstName === "" || lastName === "" || email === "" || mobileNumber === "") {
+    alert("All fields are required");
+    return false;
+  }
+  
+  return true;
+}
+
+function displayForm() {
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  var email = document.getElementById("email").value;
+  var mobileNumber = document.getElementById("mobileNumber").value;
+  
+  var result = "First Name: " + firstName + "<br>" +
+               "Last Name: " + lastName + "<br>" +
+               "Email: " + email + "<br>" +
+               "Mobile Number: " + mobileNumber;
+  
+  document.getElementById("displayResult").innerHTML = result;
+  document.getElementById("displayResult").style.display = "block";
+}
+
+function validateAndDisplay() {
+  if (validateForm()) {
+    displayForm();
+  }
+}
+
+
+    </script>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" required>
+        </div><br>
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" required>
+        </div><br>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        </div><br>
+        <div>
+          <label for="mobileNumber">Mobile Number:</label>
+          <input type="text" id="mobileNumber" required>
+        </div><br>
+        <button type="button" onclick="validateAndDisplay()">Submit</button>
+      </form>
+      
+      <div id="displayResult" style="display: none;"></div>
+      
+</body>
+</html>

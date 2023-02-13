@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case1</title>
+    <script>
+        function d1(a,b){
+     setTimeout(
+         () => {console.log("10 second delay")
+             a(b)
+        },10000)
+ }
+ 
+ function d2(b){
+     setTimeout(() => {
+         console.log("8second delay")
+         b()
+     }, 10000)
+ }
+ 
+ function d3(){
+ setTimeout(() =>{
+     console.log("10 second delay")
+ }, 8000)}
+  d1(d2,d3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

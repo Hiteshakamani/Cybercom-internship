@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case2</title>
+    <style>
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 50px;
+        }
+  
+        input[type="text"],
+        input[type="submit"] {
+          padding: 10px;
+          margin: 10px;
+          font-size: 20px;
+          width: 200px;
+          box-sizing: border-box;
+          border-radius: 5px;
+          border: 1px solid gray;
+        }
+  
+        #result {
+          margin-top: 50px;
+          font-size: 30px;
+          font-weight: bold;
+        }
+      </style>
+</head>
+
+  <body>
+    <div class="container">
+      <h2>BMI Calculator</h2>
+      <input type="text" id="mass" placeholder="Enter your mass in kg">
+      <input type="text" id="height" placeholder="Enter your height in meters">
+      <input type="submit" value="Calculate" onclick="calculateBMI()">
+    </div>
+    <div id="result"></div>
+
+    <script>
+      function calculateBMI() {
+        var mass = parseFloat(document.getElementById("mass").value);
+        var height = parseFloat(document.getElementById("height").value);
+
+        var bmi = mass / (height * height);
+
+        document.getElementById("result").innerHTML = "Your BMI is: " + bmi;
+      }
+    </script>
+  
+
+</body>
+</html>
